@@ -17,7 +17,7 @@ for filename in os.listdir(input_dir):
         #"-to", "00:05:00",
         #"-vf", "zscale=w=1728:h=1080:filter=lanczos,fps=30",
         "-c:v", "libsvtav1",
-        "-svtav1-params", "preset=8:profile=0:tune=2:crf=40:keyint=600",
+        "-svtav1-params", "preset=5:profile=0:tune=2:crf=45:keyint=600",
         "-map", "0",
         "-map", "-0:d",
         "-c:a:1", "copy",
