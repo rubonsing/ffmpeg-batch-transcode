@@ -2,6 +2,8 @@
 
 A lightweight Python utility to batch transcode all video files within a folder using FFmpeg.
 
+The relevant parameters have been optimized.
+
 ## Requirements
 
 - [FFmpeg](https://ffmpeg.org/) must be installed on your system.  
