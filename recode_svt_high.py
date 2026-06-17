@@ -12,7 +12,7 @@ def run_test(ref, dis):
         """ -lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[ref];\
         [1:v]settb=AVTB,setpts=PTS-STARTPTS[dis];[ref][dis]"""
     
-    cmd1 = cmd_head + """libvmaf=n_threads=14:shortest=true:model=version=vmaf_4k_v0.6.1"  -f null -"""
+    cmd1 = cmd_head + """libvmaf=n_threads=16:shortest=true:model=version=vmaf_4k_v0.6.1"  -f null -"""
     cmd2 = cmd_head + """ssim=shortest=true"  -f null -"""
     cmd3 = cmd_head + """psnr=shortest=true"  -f null -"""
     cmd4 = cmd_head + """xpsnr=shortest=true"  -f null -"""
@@ -31,7 +31,7 @@ for filename in os.listdir(input_dir):
         "ffmpeg", "-hide_banner", "-i", input_path,
         #"-ss", "00:00:00",
         #"-to", "00:05:00",
-        #"-vf", "zscale=w=1728:h=1080:filter=lanczos,fps=30",
+        #"-vf", "zscale=w=1920:h=1080:filter=lanczos,fps=30",
         "-c:v", "libsvtav1",
         "-svtav1-params", "preset=5:profile=0:tune=2:crf=45:keyint=600",
         "-map", "0",
