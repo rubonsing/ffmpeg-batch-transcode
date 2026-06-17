@@ -15,7 +15,7 @@ for filename in os.listdir(input_dir):
         "ffmpeg", "-hide_banner", "-i", input_path,
         #"-ss", "00:00:00",
         #"-to", "00:05:00",
-        #"-vf", "zscale=w=1728:h=1080:filter=lanczos,fps=30",
+        #"-vf", "zscale=w=1920:h=1080:filter=lanczos,fps=30",
         "-c:v", "libsvtav1",
         "-svtav1-params", "preset=8:profile=0:tune=2:crf=40:keyint=600",
         "-map", "0",
